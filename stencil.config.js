@@ -1,7 +1,7 @@
 const sass = require('@stencil/sass');
 
 exports.config = {
-  namespace: 'app',
+  namespace: 'uselessbutton',
   plugins: [
     sass()
   ],
