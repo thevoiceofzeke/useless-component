@@ -27,33 +27,64 @@ declare global {
 declare global {
 
   namespace StencilComponents {
-    interface MyComponent {
-      'first': string;
-      'last': string;
+    interface TrickButton {
+
     }
   }
 
-  interface HTMLMyComponentElement extends StencilComponents.MyComponent, HTMLStencilElement {}
+  interface HTMLTrickButtonElement extends StencilComponents.TrickButton, HTMLStencilElement {}
 
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  var HTMLTrickButtonElement: {
+    prototype: HTMLTrickButtonElement;
+    new (): HTMLTrickButtonElement;
   };
   interface HTMLElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'trick-button': HTMLTrickButtonElement;
   }
   interface ElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'trick-button': HTMLTrickButtonElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      'my-component': JSXElements.MyComponentAttributes;
+      'trick-button': JSXElements.TrickButtonAttributes;
     }
   }
   namespace JSXElements {
-    export interface MyComponentAttributes extends HTMLAttributes {
-      'first'?: string;
-      'last'?: string;
+    export interface TrickButtonAttributes extends HTMLAttributes {
+      'onButtonClicked'?: (event: CustomEvent) => void;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface TopBar {
+      'background': string;
+    }
+  }
+
+  interface HTMLTopBarElement extends StencilComponents.TopBar, HTMLStencilElement {}
+
+  var HTMLTopBarElement: {
+    prototype: HTMLTopBarElement;
+    new (): HTMLTopBarElement;
+  };
+  interface HTMLElementTagNameMap {
+    'top-bar': HTMLTopBarElement;
+  }
+  interface ElementTagNameMap {
+    'top-bar': HTMLTopBarElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'top-bar': JSXElements.TopBarAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface TopBarAttributes extends HTMLAttributes {
+      'background'?: string;
     }
   }
 }

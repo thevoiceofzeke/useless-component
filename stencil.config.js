@@ -1,5 +1,10 @@
+const sass = require('@stencil/sass');
+
 exports.config = {
-  namespace: 'mycomponent',
+  namespace: 'app',
+  plugins: [
+    sass()
+  ],
   outputTargets:[
     { 
       type: 'dist' 
@@ -8,7 +13,8 @@ exports.config = {
       type: 'www',
       serviceWorker: false
     }
-  ]
+  ],
+  globalStyle: 'src/global/app.scss'
 };
 
 exports.devServer = {

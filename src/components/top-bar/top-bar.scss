@@ -1,0 +1,16 @@
+:host {
+    div {
+        width: 150px;
+        height: 150px;
+        padding: 24px;
+    
+        &.primary {
+            background: #c5050c;
+        }
+        
+        &.secondary {
+            background: #0479a8;
+        }
+    }
+    
+}
